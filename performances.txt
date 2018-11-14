@@ -1,0 +1,40 @@
+Subtask 4:
+1) No optimization!!
+nr=10000, s=35: sort_move: 0.958193  sort_assign: 2.55303  quicksort: 0.002778
+	  s=70: sort_move: 0.992109  sort_assign: 2.65936  quicksort: 0.00280973
+
+nr=15000, s=70: sort_move: 2.16699   sort_assign: 6.10132  quicksort: 0.00449
+
+nr=20000, s=35: sort_move: 3.62246   sort_assign: 10.0017  quicksort: 0.0060928
+	  s=70: sort_move: 3.72166   sort_assign: 9.87742  quicksort: 0.00623
+
+nr=30000, s=70: sort_move: 8.08463   sort_assign: 22.6487  quicksort: 0.0100227
+
+nr=40000, s=35: sort_move: 13.7385   sort_assign: 38.4193  quicksort: 0.0135698
+          s=70: sort_move: 14.3334   sort_assign: 39.0669  quicksort: 0.0138835
+
+2) With -03 -flto optimization!!
+nr=10000, s=35: sort_move: 0.965574  sort_assign: 2.63787  quicksort: 0.00281697
+	  s=70: sort_move: 0.979584  sort_assign: 2.67118  quicksort: 0.00276782
+
+nr=15000, s=70: sort_move: 2.17702   sort_assign: 5.9994   quicksort: 0.004549
+
+nr=20000, s=35: sort_move: 3.71657   sort_assign: 9.54417  quicksort: 0.00664256
+          s=70: sort_move: 3.70586   sort_assign: 9.9407   quicksort: 0.00622
+
+nr=30000, s=70: sort_move: 8.12996   sort_assign: 22.172   quicksort: 0.010021
+
+nr=40000, s=35: sort_move: 13.8534   sort_assign: 39.4471  quicksort: 0.0140367
+	  s=70: sort_move: 14.5606   sort_assign: 42.0969  quicksort: 0.0137663
+
+
+a) Quicksort with complexity O(n*log(n)) is the fastest sorting algorithm, sort_move and sort_assign 	both have a complexity of O(n^2);
+b) sort_move is faster than sort_assign, because uses swap();
+c) I didn't observe any significant difference between optimized and unoptimized compilers :(
+
+Subtask 6:
+1) The complexity of both sort_move() and sort_assign() is O(n^2). 
+2) std_move() is faster.
+
+Subtask 7:
+The fastest among all sorting algorithms is vectortest::sort_std(), which uses quicksort!!
